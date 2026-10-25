@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LUMÉRA — Beauty & Skincare</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP OFFER -->
+<div class="announcement">
+  <span>FREE SHIPPING ON ORDERS ABOVE ₹999</span>
+  <span>•</span>
+  <span>NEW: GET 15% OFF YOUR FIRST ORDER</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+
+  <div class="logo">
+    LUMÉRA
+    <small>BEAUTY STUDIO</small>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#bestsellers">Bestsellers</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="header-actions">
+
+    <button class="icon-btn" onclick="openSearch()">⌕</button>
+
+    <button class="icon-btn" onclick="openLogin()">
+      ♙
+    </button>
+
+    <button class="cart-button" onclick="openCart()">
+      Bag <span id="cartCount">0</span>
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">THE EVERYDAY BEAUTY EDIT</p>
+
+    <h1>
+      Skin that feels
+      <em>beautiful.</em>
+    </h1>
+
+    <p class="hero-text">
+      Thoughtfully formulated skincare and beauty essentials
+      designed for your everyday ritual.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button class="primary-btn" onclick="scrollToShop()">
+        SHOP COLLECTION →
+      </button>
+
+      <button class="text-btn" onclick="showStory()">
+        OUR STORY
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=85">
+    
+    <div class="floating-card">
+      <span>BESTSELLER</span>
+      <strong>Glow Reset</strong>
+      <small>Vitamin C Serum</small>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- TRUST BAR -->
+<section class="trust">
+
+  <div>
+    <strong>100%</strong>
+    <span>VEGAN</span>
+  </div>
+
+  <div>
+    <strong>CRUELTY</strong>
+    <span>FREE</span>
+  </div>
+
+  <div>
+    <strong>DERMA</strong>
+    <span>TESTED</span>
+  </div>
+
+  <div>
+    <strong>FREE</strong>
+    <span>SHIPPING ₹999+</span>
+  </div>
+
+</section>
+
+
+<!-- SHOP -->
+<section class="shop-section" id="shop">
+
+  <div class="section-heading">
+
+    <div>
+      <p class="eyebrow">SHOP LUMÉRA</p>
+
+      <h2>
+        Your routine,
+        <em>elevated.</em>
+      </h2>
+    </div>
+
+    <div class="filters">
+
+      <button class="filter active" onclick="filterProducts('all',this)">
+        All
+      </button>
+
+      <button class="filter" onclick="filterProducts('skincare',this)">
+        Skincare
+      </button>
+
+      <button class="filter" onclick="filterProducts('body',this)">
+        Body
+      </button>
+
+      <button class="filter" onclick="filterProducts('makeup',this)">
+        Makeup
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <div class="products" id="productGrid"></div>
+
+</section>
+
+
+<!-- FEATURE -->
+<section class="feature">
+
+  <div class="feature-image">
+
+    <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1200&q=85">
+
+  </div>
+
+  <div class="feature-content">
+
+    <p class="eyebrow">THE LUMÉRA PHILOSOPHY</p>
+
+    <h2>
+      Less clutter.
+      <br>
+      <em>More glow.</em>
+    </h2>
+
+    <p>
+      We believe beauty should feel simple. Every formula is
+      created with carefully selected ingredients and designed
+      to fit effortlessly into your daily routine.
+    </p>
+
+    <button class="primary-btn" onclick="showStory()">
+      DISCOVER LUMÉRA
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+
+  <p class="eyebrow">JOIN THE GLOW CLUB</p>
+
+  <h2>Beauty secrets, straight to your inbox.</h2>
+
+  <p>Get early access to launches, exclusive offers and beauty tips.</p>
+
+  <div class="newsletter-form">
+
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Your email address"
+    >
+
+    <button onclick="subscribe()">
+      JOIN →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-brand">
+
+    <div class="logo">
+      LUMÉRA
+      <small>BEAUTY STUDIO</small>
+    </div>
+
+    <p>
+      Modern beauty essentials for your everyday ritual.
+    </p>
+
+  </div>
+
+  <div>
+    <h4>SHOP</h4>
+    <a>Skincare</a>
+    <a>Body Care</a>
+    <a>Makeup</a>
+    <a>Best Sellers</a>
+  </div>
+
+  <div>
+    <h4>HELP</h4>
+    <a>Contact</a>
+    <a>Shipping</a>
+    <a>Returns</a>
+    <a>FAQs</a>
+  </div>
+
+  <div>
+    <h4>FOLLOW</h4>
+    <a>Instagram</a>
+    <a>Facebook</a>
+    <a>Pinterest</a>
+  </div>
+
+</footer>
+
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeModal('loginModal')">×</button>
+
+    <p class="eyebrow">WELCOME BACK</p>
+
+    <h2>Sign in to Luméra</h2>
+
+    <input id="loginEmail" type="email" placeholder="Email address">
+
+    <input id="loginPassword" type="password" placeholder="Password">
+
+    <button class="primary-btn full" onclick="login()">
+      SIGN IN
+    </button>
+
+    <p class="modal-note">
+      New to Luméra?
+      <strong onclick="signup()">Create an account</strong>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+
+  <div class="product-modal">
+
+    <button class="close" onclick="closeModal('productModal')">×</button>
+
+    <img id="modalImage">
+
+    <div class="modal-product-info">
+
+      <p id="modalCategory" class="eyebrow"></p>
+
+      <h2 id="modalName"></h2>
+
+      <div class="rating">★★★★★ <span>4.9</span></div>
+
+      <p id="modalDescription"></p>
+
+      <h3 id="modalPrice"></h3>
+
+      <button class="primary-btn full" id="modalAddButton">
+        ADD TO BAG
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CART -->
+<div class="side-panel" id="cartPanel">
+
+  <div class="panel-header">
+
+    <h2>Your Bag</h2>
+
+    <button onclick="closeCart()">×</button>
+
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-bottom">
+
+    <div class="subtotal">
+
+      <span>Subtotal</span>
+
+      <strong id="subtotal">₹0</strong>
+
+    </div>
+
+    <p>Taxes and shipping calculated at checkout.</p>
+
+    <button class="primary-btn full" onclick="checkout()">
+      PROCEED TO CHECKOUT →
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- CHECKOUT -->
+<div class="modal" id="checkoutModal">
+
+  <div class="checkout-box">
+
+    <button class="close" onclick="closeModal('checkoutModal')">×</button>
+
+    <p class="eyebrow">CHECKOUT</p>
+
+    <h2>Complete your order</h2>
+
+    <div class="checkout-layout">
+
+      <div>
+
+        <h4>CONTACT INFORMATION</h4>
+
+        <input id="checkoutName" placeholder="Full name">
+
+        <input id="checkoutEmail" placeholder="Email address">
+
+        <input id="checkoutPhone" placeholder="Mobile number">
+
+        <h4>DELIVERY ADDRESS</h4>
+
+        <input placeholder="House / Flat / Street">
+
+        <input placeholder="City">
+
+        <div class="two-input">
+
+          <input placeholder="State">
+
+          <input placeholder="PIN Code">
+
+        </div>
+
+      </div>
+
+
+      <div class="payment-box">
+
+        <h4>PAYMENT METHOD</h4>
+
+        <label class="payment-option">
+
+          <input type="radio" name="payment" value="upi" checked>
+
+          <span>UPI</span>
+
+          <small>Google Pay / PhonePe / Paytm</small>
+
+        </label>
+
+        <label class="payment-option">
+
+          <input type="radio" name="payment" value="card">
+
+          <span>Credit / Debit Card</span>
+
+          <small>Visa / Mastercard / RuPay</small>
+
+        </label>
+
+        <label class="payment-option">
+
+          <input type="radio" name="payment" value="cod">
+
+          <span>Cash on Delivery</span>
+
+          <small>Pay when your order arrives</small>
+
+        </label>
+
+        <div class="checkout-total">
+
+          <span>Total</span>
+
+          <strong id="checkoutTotal">₹0</strong>
+
+        </div>
+
+        <button class="primary-btn full" onclick="placeOrder()">
+          PLACE ORDER →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- SUCCESS -->
+<div class="modal" id="successModal">
+
+  <div class="success-box">
+
+    <div class="success-icon">✓</div>
+
+    <p class="eyebrow">ORDER CONFIRMED</p>
+
+    <h2>Your beauty ritual is on its way.</h2>
+
+    <p id="orderNumber"></p>
+
+    <button class="primary-btn" onclick="closeAll()">
+      CONTINUE SHOPPING
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- SEARCH -->
+<div class="search-overlay" id="searchOverlay">
+
+  <button class="search-close" onclick="closeSearch()">×</button>
+
+  <div class="search-box">
+
+    <p class="eyebrow">SEARCH LUMÉRA</p>
+
+    <input
+      id="searchInput"
+      placeholder="Search sunscreen, serum, lotion..."
+      oninput="searchProducts()"
+    >
+
+    <div id="searchResults"></div>
+
+  </div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
